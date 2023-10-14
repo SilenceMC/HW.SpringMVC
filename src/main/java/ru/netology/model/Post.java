@@ -4,6 +4,8 @@ public class Post {
   private long id;
   private String content;
 
+  private boolean removed = false;
+
   public Post(long id, String content) {
     this.id = id;
     this.content = content;
@@ -17,11 +19,19 @@ public class Post {
     this.id = id;
   }
 
+  public void setRemoved(boolean removed) {
+    this.removed = removed;
+  }
+
   public String getContent() {
     return content;
   }
 
   public void setContent(String content) {
     this.content = content;
+  }
+
+  public boolean isRemoved() {
+    return removed;
   }
 }
